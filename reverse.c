@@ -22,6 +22,14 @@ int main(int argc, char** argv){
 	//allocate memory enough to reverse the file
 	char* ptr = malloc(size);
 
+	if(ptr == NULL){
+        	//This error handling was discussed with Isfar Baset
+        	//if ran out of memory
+        	//throw an error message and terminate
+        	fprintf(stderr, "\n\nFile too big\nRan out of memory\n\n");
+                exit(EXIT_FAILURE);
+		}
+
 	//store the file contents reversed
 	for(int i = size - 1; i >= 0; i--){
 		
