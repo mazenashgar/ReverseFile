@@ -31,15 +31,13 @@ int main(int argc, char** argv){
 		}
 
 	//store the file contents reversed
-	for(int i = size - 1; i >= 0; i--){
+	for(int i = 0; i < size; ++i){
 		
-		ptr[size-i] = buffer[i];
+		ptr[i] = buffer[size-(i+1)];
 	}
 
 	//write the reversed contents in the 2nd file
 	//passed by user
 	write_file(argv[2], ptr, size);
 
-	return 0;
-
-}
+	return 0;}

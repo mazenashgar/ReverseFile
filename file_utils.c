@@ -60,7 +60,7 @@ int write_file(char* filename, char* buffer, int size){
 	FILE* fp = fopen(filename, "w+");
 	
 	//write the contents of buffer in the file
-	fwrite(buffer, size+1, 1, fp);
+	fwrite(buffer, size, 1, fp);
 	
 	//close the file
 	fclose(fp);
